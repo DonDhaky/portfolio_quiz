@@ -24,7 +24,7 @@
   }
   
   function handleDownloadCV() {
-    window.open('./assets/cv.pdf', '_blank');
+    window.open('/assets/cv.pdf', '_blank');
   }
 </script>
 
