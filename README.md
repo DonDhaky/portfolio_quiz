@@ -5,8 +5,7 @@ Un quiz interactif sur l'histoire des jeux vidéo, développé avec Svelte, un f
 ## Fonctionnalités
 
 - 10 questions aléatoires sur l'histoire des jeux vidéo
-- Compte à rebours de 15 secondes par question
-- Personnage animé qui réagit aux réponses (en cours)
+- Personnage animé qui réagit aux réponses
 - Effets sonores rétro
 - Stockage des meilleurs scores
 - Design rétro inspiré du Game Boy Advance
