@@ -4,5 +4,5 @@ import { svelte } from '@sveltejs/vite-plugin-svelte'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [svelte()],
-  base: '/quiz-jeux-video/', // Remplacez par le nom de votre dépôt
+  base: '/portfolio_quiz/', // Correspond au nom de votre dépôt GitHub
 })
