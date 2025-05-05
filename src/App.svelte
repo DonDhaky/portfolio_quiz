@@ -23,7 +23,6 @@
     score = 0;
     timeLeft = 90;
     characterMood = 'neutral';
-
   }
 
   function handleAnswer(answerIndex) {
@@ -41,7 +40,6 @@
         currentQuestion++;
         timeLeft = 90;
         characterMood = 'neutral';
-    
       } else {
         gameState = 'finished';
       }
@@ -57,7 +55,6 @@
         currentQuestion++;
         timeLeft = 90;
         characterMood = 'neutral';
-    
       } else {
         gameState = 'finished';
       }

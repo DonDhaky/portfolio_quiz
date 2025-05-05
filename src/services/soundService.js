@@ -1,10 +1,8 @@
 class SoundService {
   constructor() {
     this.sounds = {
-      correct: new Audio('public/assets/sfx/correct.wav'),
-      wrong: new Audio('public/assets/sfx/wrong.wav'),
-      hover: new Audio('public/assets/sfx/hover.wav'),
-      transition: new Audio('public/assets/sfx/transition.wav')
+      correct: new Audio('/assets/sfx/correct.wav'),
+      wrong: new Audio('/assets/sfx/wrong.wav')
     };
     
     // Précharger les sons
@@ -21,7 +19,7 @@ class SoundService {
   }
 
   playHover() {
-    this.play('hover');
+    // Désactivé temporairement
   }
 
   playCorrect() {
@@ -33,7 +31,7 @@ class SoundService {
   }
 
   playTransition() {
-    this.play('transition');
+    // Désactivé temporairement
   }
 }
 
