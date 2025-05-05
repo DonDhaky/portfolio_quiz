@@ -1,16 +1,17 @@
-# Quiz Histoire des Jeux Vidéo
+# Quiz sur l'Histoire des Jeux Vidéo
 
-Un quiz interactif sur l'histoire des jeux vidéo, développé avec Svelte.
+Un quiz interactif sur l'histoire des jeux vidéo, développé avec Svelte, un framework Javascript ultra moderne et efficace.
 
 ## Fonctionnalités
 
 - 10 questions aléatoires sur l'histoire des jeux vidéo
 - Compte à rebours de 15 secondes par question
-- Personnage animé qui réagit aux réponses
+- Personnage animé qui réagit aux réponses (en cours)
 - Effets sonores rétro
 - Stockage des meilleurs scores
 - Design rétro inspiré du Game Boy Advance
 - Accessibilité optimisée
+- Formulaire de contact en fin de quiz
 
 ## Installation
 
@@ -36,7 +37,7 @@ npm run deploy
 
 ## Déploiement
 
-Le site est déployé sur GitHub Pages à l'adresse : [https://votre-nom-utilisateur.github.io/quiz-jeux-video/](https://votre-nom-utilisateur.github.io/quiz-jeux-video/)
+Le site est déployé sur GitHub Pages à l'adresse : [https://dondhaky.github.io/portfolio_quiz/](https://dondhaky.github.io/portfolio_quiz/)
 
 ## Licence
 
