@@ -1,10 +1,10 @@
 class SoundService {
   constructor() {
     this.sounds = {
-      correct: new Audio('/assets/sfx/correct.wav'),
-      wrong: new Audio('/assets/sfx/wrong.wav'),
-      hover: new Audio('/assets/sfx/hover.wav'),
-      transition: new Audio('/assets/sfx/transition.wav')
+      correct: new Audio('public/assets/sfx/correct.wav'),
+      wrong: new Audio('public/assets/sfx/wrong.wav'),
+      hover: new Audio('public/assets/sfx/hover.wav'),
+      transition: new Audio('public/assets/sfx/transition.wav')
     };
     
     // Précharger les sons
