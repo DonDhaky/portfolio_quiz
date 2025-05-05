@@ -11,7 +11,7 @@
   let currentQuestion = 0;
   let score = 0;
   let questions = [];
-  let timeLeft = 15;
+  let timeLeft = 90;
   let characterMood = 'neutral';
 
   function startQuiz() {
@@ -21,9 +21,9 @@
     gameState = 'playing';
     currentQuestion = 0;
     score = 0;
-    timeLeft = 15;
+    timeLeft = 90;
     characterMood = 'neutral';
-    soundService.playTransition();
+
   }
 
   function handleAnswer(answerIndex) {
@@ -39,9 +39,9 @@
     setTimeout(() => {
       if (currentQuestion < questions.length - 1) {
         currentQuestion++;
-        timeLeft = 15;
+        timeLeft = 90;
         characterMood = 'neutral';
-        soundService.playTransition();
+    
       } else {
         gameState = 'finished';
       }
@@ -55,9 +55,9 @@
     setTimeout(() => {
       if (currentQuestion < questions.length - 1) {
         currentQuestion++;
-        timeLeft = 15;
+        timeLeft = 90;
         characterMood = 'neutral';
-        soundService.playTransition();
+    
       } else {
         gameState = 'finished';
       }

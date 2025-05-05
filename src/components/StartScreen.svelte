@@ -3,8 +3,8 @@
 </script>
 
 <div class="start-screen" in:fade={{ duration: 500 }}>
-  <h1>Quiz Histoire des Jeux Vidéo</h1>
-  <p class="instructions">Vous avez 15 secondes par question. Bonne chance !</p>
+  <h1>Un brin d'histoire sur les jeux vidéo</h1>
+  <p class="instructions">Vous avez 90 secondes. Bonne chance !</p>
   <button class="start-button" on:click>
     Démarrer le Quiz
   </button>
