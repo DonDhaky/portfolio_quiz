@@ -20,11 +20,13 @@
 </nav>
 
 <div class="start-screen" in:fade={{ duration: 500 }}>
-  <h1>Un brin d'histoire sur les jeux vidéo</h1>
-  <p class="instructions">Vous avez 90 secondes. Bonne chance !</p>
-  <button class="start-button" on:click>
-    Démarrer le Quiz
-  </button>
+  <div class="quiz-container">
+    <h1>Un brin d'histoire sur les jeux vidéo</h1>
+    <p class="instructions">Vous avez 90 secondes. Bonne chance !</p>
+    <button class="start-button" on:click>
+      Démarrer le Quiz
+    </button>
+  </div>
 </div>
 
 <style>
@@ -58,11 +60,23 @@
     transform: scale(1.05);
   }
 
+  .quiz-container {
+    background-color: #2a2a2a;
+    border: 3px solid #00ff00;
+    border-radius: 10px;
+    padding: 2rem;
+    max-width: 800px;
+    width: 90%;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+    display: grid;
+    grid-template-rows: auto auto auto;
+    gap: 2rem;
+    margin: 2rem;
+  }
+
   .start-screen {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    place-items: center;
     min-height: 100vh;
     background-color: #1a1a1a;
     color: #00ff00;
@@ -73,13 +87,14 @@
 
   h1 {
     font-size: 2rem;
-    margin-bottom: 2rem;
+    margin: 0;
     text-shadow: 2px 2px #000;
+    line-height: 1.4;
   }
 
   .instructions {
     font-size: 1rem;
-    margin-bottom: 3rem;
+    margin: 0;
     line-height: 1.5;
   }
 
@@ -92,6 +107,8 @@
     font-size: 1.2rem;
     cursor: pointer;
     transition: transform 0.2s;
+    justify-self: center;
+    width: fit-content;
   }
 
   .start-button:hover {
