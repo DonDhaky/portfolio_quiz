@@ -1,19 +1,37 @@
 <script>
   import { fade } from 'svelte/transition';
+  import { createEventDispatcher } from 'svelte';
   import { scoreService } from '../services/scoreService';
   import { soundService } from '../services/soundService';
   
-  export let score;
-  export let totalQuestions;
-  export let onRestart;
-  
+  const dispatch = createEventDispatcher();
+
+  export let quizScore = { score: 0, total: 0, type: 'games' };
+
+  function getQuizTitle() {
+    switch(quizScore.type) {
+      case 'games':
+        return 'Quiz Jeux Vidéo';
+      case 'basketball':
+        return 'Quiz Basketball';
+      case 'tech':
+        return 'Quiz Technologies';
+      default:
+        return 'Quiz';
+    }
+  }
+
+  function restart() {
+    dispatch('restart');
+  }
+
   let highScores = scoreService.getHighScores();
-  let showNameInput = scoreService.isHighScore(score);
+  let showNameInput = scoreService.isHighScore(quizScore.score);
   let playerName = '';
   
   function handleSubmit() {
     if (playerName.trim()) {
-      scoreService.saveScore(playerName.trim(), score);
+      scoreService.saveScore(playerName.trim(), quizScore.score);
       highScores = scoreService.getHighScores();
       showNameInput = false;
     }
@@ -30,9 +48,12 @@
 
 <div class="final-screen" in:fade={{ duration: 500 }}>
   <h1>Quiz Terminé !</h1>
-  
-  <div class="score-display">
-    <p>Votre score final : {score} / {totalQuestions}</p>
+  <h2>{getQuizTitle()}</h2>
+  <div class="score-container">
+    <p class="score">Score : {quizScore.score}/{quizScore.total}</p>
+    <p class="percentage">
+      {Math.round((quizScore.score / quizScore.total) * 100)}% de bonnes réponses
+    </p>
   </div>
   
   {#if showNameInput}
@@ -65,7 +86,7 @@
   <div class="actions">
     <button
       class="action-button"
-      on:click={onRestart}
+      on:click={restart}
       on:mouseenter={() => soundService.playHover()}
       aria-label="Rejouer le quiz"
     >
@@ -94,21 +115,48 @@
 
 <style>
   .final-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #1a1a1a;
+    color: #00ff00;
+    font-family: 'Press Start 2P', monospace;
     text-align: center;
     padding: 2rem;
-    max-width: 600px;
-    margin: 0 auto;
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px #000;
+  }
+
+  h2 {
+    font-size: 1.5rem;
     margin-bottom: 2rem;
     color: #00ff00;
   }
 
-  .score-display {
-    font-size: 1.5rem;
+  .score-container {
+    background-color: #2a2a2a;
+    border: 3px solid #00ff00;
+    border-radius: 10px;
+    padding: 2rem;
     margin-bottom: 2rem;
+  }
+
+  .score {
+    font-size: 2rem;
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+
+  .percentage {
+    font-size: 1.2rem;
+    margin: 0;
+    opacity: 0.8;
   }
 
   .name-input {
@@ -173,5 +221,23 @@
   .action-button:focus {
     outline: 2px solid #fff;
     outline-offset: 2px;
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+    }
+
+    .score {
+      font-size: 1.5rem;
+    }
+
+    .percentage {
+      font-size: 1rem;
+    }
   }
 </style> 

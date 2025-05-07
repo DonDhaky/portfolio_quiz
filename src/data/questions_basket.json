@@ -1,0 +1,281 @@
+{
+    "questions": [
+      {
+        "id": 1,
+        "question": "Qui est le célèbre coach des Bulls dans les années 1990 ?",
+        "options": ["Phil Jackson", "Gregg Popovich", "Steve Kerr", "Pat Riley"],
+        "correctAnswer": 0
+      },
+      {
+        "id": 2,
+        "question": "Quel joueur est célèbre pour son dunk libre lors du concours de 1988 ?",
+        "options": ["Dominique Wilkins", "Vince Carter", "Michael Jordan", "Zach LaVine"],
+        "correctAnswer": 2
+      },
+      {
+        "id": 3,
+        "question": "Quel joueur a remporté 6 titres NBA avec les Bulls dans les années 90 ?",
+        "options": ["Scottie Pippen", "Dennis Rodman", "Michael Jordan", "Steve Kerr"],
+        "correctAnswer": 2
+      },
+      {
+        "id": 4,
+        "question": "Quel joueur détient le record de points marqués en carrière en NBA ?",
+        "options": ["Michael Jordan", "Karl Malone", "LeBron James", "Kobe Bryant"],
+        "correctAnswer": 2
+      },
+      {
+        "id": 5,
+        "question": "Quel joueur a remporté 6 titres NBA avec les Bulls dans les années 90 ?",
+        "options": ["Scottie Pippen", "Dennis Rodman", "Michael Jordan", "Steve Kerr"],
+        "correctAnswer": 2
+      },
+      {
+        "id": 6,
+        "question": "Quel joueur détient le record de points marqués en carrière en NBA ?",
+        "options": ["Michael Jordan", "Karl Malone", "LeBron James", "Kobe Bryant"],
+        "correctAnswer": 2
+      },
+      {
+        "id": 7,
+        "question": "Quel est le nom de la ligue féminine de basketball américaine ?",
+        "options": ["WNB", "NBA Women", "WNBA", "FIBA Women"],
+        "correctAnswer": 2
+      },
+      {
+        "id": 8,
+        "question": "Quelle franchise NBA est basée à San Francisco ?",
+        "options": ["Warriors", "Kings", "Lakers", "Clippers"],
+        "correctAnswer": 0
+      },
+      {
+        "id": 9,
+        "question": "Quel joueur français a remporté un titre NBA avec les Spurs ?",
+        "options": ["Evan Fournier", "Tony Parker", "Rudy Gobert", "Boris Diaw"],
+        "correctAnswer": 1
+      },
+      {
+        "id": 10,
+        "question": "Quel est le nom de la ligue féminine de basketball américaine ?",
+        "options": ["WNB", "NBA Women", "WNBA", "FIBA Women"],
+        "correctAnswer": 2
+      },
+      {
+        "id": 11,
+        "question": "Quel joueur détient le record de points marqués en carrière en NBA ?",
+        "options": ["Michael Jordan", "Karl Malone", "LeBron James", "Kobe Bryant"],
+        "correctAnswer": 2
+      },
+      {
+        "id": 12,
+        "question": "Quelle équipe a remporté le plus de titres NBA ?",
+        "options": ["Los Angeles Lakers", "Chicago Bulls", "Boston Celtics", "Golden State Warriors"],
+        "correctAnswer": 2
+      },
+      {
+        "id": 13,
+        "question": "Quel joueur est surnommé 'The Greek Freak' ?",
+        "options": ["Nikola Jokic", "Luka Doncic", "Giannis Antetokounmpo", "Joel Embiid"],
+        "correctAnswer": 2
+      },
+      {
+        "id": 14,
+        "question": "Quel est le nombre de joueurs sur le terrain par équipe lors d’un match de basket ?",
+        "options": ["4", "5", "6", "7"],
+        "correctAnswer": 1
+      },
+      {
+        "id": 15,
+        "question": "Quel est le nom de la ligue féminine de basketball américaine ?",
+        "options": ["WNB", "NBA Women", "WNBA", "FIBA Women"],
+        "correctAnswer": 2
+      },
+      {
+        "id": 16,
+        "question": "Quelle franchise NBA est surnommée 'Heat' ?",
+        "options": ["Orlando", "Miami", "Atlanta", "Charlotte"],
+        "correctAnswer": 1
+      },
+      {
+        "id": 17,
+        "question": "Quelle est la durée d’un quart-temps en NBA ?",
+        "options": ["10 minutes", "12 minutes", "15 minutes", "8 minutes"],
+        "correctAnswer": 1
+      },
+      {
+        "id": 18,
+        "question": "Quel joueur est célèbre pour son dunk libre lors du concours de 1988 ?",
+        "options": ["Dominique Wilkins", "Vince Carter", "Michael Jordan", "Zach LaVine"],
+        "correctAnswer": 2
+      },
+      {
+        "id": 19,
+        "question": "Quel joueur est surnommé 'The Greek Freak' ?",
+        "options": ["Nikola Jokic", "Luka Doncic", "Giannis Antetokounmpo", "Joel Embiid"],
+        "correctAnswer": 2
+      },
+      {
+        "id": 20,
+        "question": "Quel joueur détient le record de points marqués en carrière en NBA ?",
+        "options": ["Michael Jordan", "Karl Malone", "LeBron James", "Kobe Bryant"],
+        "correctAnswer": 2
+      },
+      {
+        "id": 21,
+        "question": "Quel est le surnom de Shaquille O’Neal ?",
+        "options": ["The King", "The Big Aristotle", "Air Shaq", "The Tank"],
+        "correctAnswer": 1
+      },
+      {
+        "id": 22,
+        "question": "Combien de points faut-il pour qu’un joueur réalise un triple-double minimum ?",
+        "options": ["10", "20", "15", "30"],
+        "correctAnswer": 0
+      },
+      {
+        "id": 23,
+        "question": "Quel joueur a été choisi numéro 1 de la Draft NBA 2003 ?",
+        "options": ["LeBron James", "Dwyane Wade", "Carmelo Anthony", "Chris Bosh"],
+        "correctAnswer": 0
+      },
+      {
+        "id": 24,
+        "question": "Quel joueur est considéré comme le meilleur shooteur à 3 points de l’histoire ?",
+        "options": ["Ray Allen", "Klay Thompson", "Stephen Curry", "Reggie Miller"],
+        "correctAnswer": 2
+      },
+      {
+        "id": 25,
+        "question": "Quelle ville héberge la franchise des Raptors ?",
+        "options": ["Toronto", "Vancouver", "New York", "Montreal"],
+        "correctAnswer": 0
+      },
+      {
+        "id": 26,
+        "question": "Qui a gagné le titre de MVP de la saison NBA 2022-2023 ?",
+        "options": ["Giannis Antetokounmpo", "Nikola Jokic", "Joel Embiid", "Jayson Tatum"],
+        "correctAnswer": 2
+      },
+      {
+        "id": 27,
+        "question": "Quelle nation a remporté la Coupe du Monde FIBA 2019 ?",
+        "options": ["France", "Espagne", "États-Unis", "Serbie"],
+        "correctAnswer": 1
+      },
+      {
+        "id": 28,
+        "question": "Quel joueur NBA est célèbre pour avoir dit 'Anything is possible!' ?",
+        "options": ["Kevin Garnett", "Paul Pierce", "Kobe Bryant", "Allen Iverson"],
+        "correctAnswer": 0
+      },
+      {
+        "id": 29,
+        "question": "Quelle franchise NBA a pour mascotte un gorille ?",
+        "options": ["Phoenix Suns", "Chicago Bulls", "Denver Nuggets", "Orlando Magic"],
+        "correctAnswer": 0
+      },
+      {
+        "id": 30,
+        "question": "Quelle couleur n’est pas dans le logo officiel de la NBA ?",
+        "options": ["Bleu", "Rouge", "Noir", "Blanc"],
+        "correctAnswer": 2
+      },
+      {
+        "id": 31,
+        "question": "Quel est le nom du championnat nord-américain universitaire de basketball ?",
+        "options": ["March Madness", "College Cup", "Basket U", "Final Four League"],
+        "correctAnswer": 0
+      },
+      {
+        "id": 32,
+        "question": "Quel joueur est surnommé 'Chef Curry' ?",
+        "options": ["Stephen Curry", "Seth Curry", "Del Curry", "Tyrese Maxey"],
+        "correctAnswer": 0
+      },
+      {
+        "id": 33,
+        "question": "Quelle position occupe traditionnellement le joueur le plus grand ?",
+        "options": ["Arrière", "Meneur", "Ailier", "Pivot"],
+        "correctAnswer": 3
+      },
+      {
+        "id": 34,
+        "question": "Combien de points vaut un lancer franc réussi ?",
+        "options": ["1", "2", "3", "0"],
+        "correctAnswer": 0
+      },
+      {
+        "id": 35,
+        "question": "Quel joueur français a été drafté numéro 1 en 2023 ?",
+        "options": ["Victor Wembanyama", "Killian Hayes", "Frank Ntilikina", "Bilal Coulibaly"],
+        "correctAnswer": 0
+      },
+      {
+        "id": 36,
+        "question": "Quel est le nom du trophée donné au champion NBA ?",
+        "options": ["Larry O'Brien Trophy", "NBA Gold Cup", "Jordan Trophy", "Basketball Shield"],
+        "correctAnswer": 0
+      },
+      {
+        "id": 37,
+        "question": "Quel joueur est célèbre pour le 'Sky Hook' ?",
+        "options": ["Wilt Chamberlain", "Shaquille O'Neal", "Kareem Abdul-Jabbar", "Tim Duncan"],
+        "correctAnswer": 2
+      },
+      {
+        "id": 38,
+        "question": "Quel pays accueille l’EuroBasket ?",
+        "options": ["USA", "Espagne", "France", "Différents pays européens"],
+        "correctAnswer": 3
+      },
+      {
+        "id": 39,
+        "question": "Combien de temps dure une possession en NBA ?",
+        "options": ["24 secondes", "30 secondes", "35 secondes", "20 secondes"],
+        "correctAnswer": 0
+      },
+      {
+        "id": 40,
+        "question": "Quel joueur est surnommé 'The Answer' ?",
+        "options": ["Allen Iverson", "Chris Paul", "Kyrie Irving", "Derrick Rose"],
+        "correctAnswer": 0
+      },
+      {
+        "id": 41,
+        "question": "Quelle est la salle des Lakers ?",
+        "options": ["Barclays Center", "Staples Center", "Chase Center", "Crypto.com Arena"],
+        "correctAnswer": 3
+      },
+      {
+        "id": 42,
+        "question": "Quel est le score maximal possible sur un seul tir ?",
+        "options": ["3 points", "4 points", "5 points", "6 points"],
+        "correctAnswer": 1
+      },
+      {
+        "id": 43,
+        "question": "Quelle franchise NBA a pour logo un cerf ?",
+        "options": ["Milwaukee Bucks", "Chicago Bulls", "Utah Jazz", "Houston Rockets"],
+        "correctAnswer": 0
+      },
+      {
+        "id": 44,
+        "question": "Quel joueur est surnommé 'King James' ?",
+        "options": ["James Harden", "LeBron James", "James Worthy", "Jimmy Butler"],
+        "correctAnswer": 1
+      },
+      {
+        "id": 45,
+        "question": "Quel joueur a été MVP à l’unanimité en 2016 ?",
+        "options": ["Stephen Curry", "Kevin Durant", "LeBron James", "Russell Westbrook"],
+        "correctAnswer": 0
+      },
+      {
+        "id": 46,
+        "question": "Quelle équipe NBA est basée à Dallas ?",
+        "options": ["Rockets", "Mavericks", "Spurs", "Pelicans"],
+        "correctAnswer": 1
+      }  
+    ]
+  }
+  
