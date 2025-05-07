@@ -18,14 +18,14 @@
 
 <nav class="nav-bar">
   <div class="personal-info">
-    <h2>Erick Thonon</h2>
+    <h2>Erick THONON</h2>
     <p>Développeur Web & Mobile</p>
   </div>
   <div class="nav-buttons">
-    <button class="nav-button" on:click={handleDownloadCV}>
+    <button class="start-button" on:click={handleDownloadCV}>
       Télécharger CV
     </button>
-    <button class="nav-button" on:click={handleEmailClick}>
+    <button class="start-button" on:click={handleEmailClick}>
       Me Contacter
     </button>
   </div>
