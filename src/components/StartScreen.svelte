@@ -23,7 +23,7 @@
   </div>
   <div class="nav-buttons">
     <button class="start-button" on:click={handleDownloadCV}>
-      Télécharger CV
+      Télécharger mon CV
     </button>
     <button class="start-button" on:click={handleEmailClick}>
       Me Contacter
@@ -35,7 +35,7 @@
   <div class="quizzes-grid">
     <div class="quiz-container">
       <h1>Un brin d'histoire sur les jeux vidéo</h1>
-      <p class="instructions">Vous avez 90 secondes. Bonne chance !</p>
+      <p class="instructions">Fan de gaming ? Testez vos connaissances !</p>
       <button class="start-button" on:click={() => startQuiz('games')}>
         Démarrer le Quiz
       </button>
@@ -43,7 +43,7 @@
 
     <div class="quiz-container">
       <h1>L'évolution des nouvelles technologies</h1>
-      <p class="instructions">Testez vos connaissances en 90 secondes !</p>
+      <p class="instructions">"Oh non, l'IA c'est nul, ça rend les devs moyens, ils ne connaissent plus leur métier !..."</p>
       <button class="start-button" on:click={() => startQuiz('tech')}>
         Démarrer le Quiz
       </button>
@@ -51,7 +51,7 @@
 
     <div class="quiz-container">
       <h1>L'histoire du basketball</h1>
-      <p class="instructions">90 secondes pour devenir un expert !</p>
+      <p class="instructions">Grand fan de basketball, montrez moi que vous n'êtes pas un "basketix" !</p>
       <button class="start-button" on:click={() => startQuiz('basketball')}>
         Démarrer le Quiz
       </button>
