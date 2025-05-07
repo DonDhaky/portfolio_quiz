@@ -1,6 +1,23 @@
 <script>
   import { fade } from 'svelte/transition';
+
+  function handleEmailClick() {
+    window.location.href = 'mailto:erickthonon@gmail.com.com';
+  }
+
+  function handleDownloadCV() {
+    window.open('https://dondhaky.github.io/portfolio_quiz/assets/cv.pdf', '_blank');
+  }
 </script>
+
+<nav class="nav-bar">
+  <button class="nav-button" on:click={handleDownloadCV}>
+    Télécharger CV
+  </button>
+  <button class="nav-button" on:click={handleEmailClick}>
+    Me Contacter
+  </button>
+</nav>
 
 <div class="start-screen" in:fade={{ duration: 500 }}>
   <h1>Un brin d'histoire sur les jeux vidéo</h1>
@@ -11,6 +28,36 @@
 </div>
 
 <style>
+  .nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+    background-color: #2a2a2a;
+    border-bottom: 2px solid #00ff00;
+  }
+
+  .nav-button {
+    background-color: #2a2a2a;
+    color: #00ff00;
+    border: 2px solid #00ff00;
+    padding: 0.5rem 1rem;
+    margin-left: 1rem;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .nav-button:hover {
+    background-color: #00ff00;
+    color: #2a2a2a;
+    transform: scale(1.05);
+  }
+
   .start-screen {
     display: flex;
     flex-direction: column;
