@@ -6,7 +6,7 @@
 
   let currentScreen = 'start';
   let currentQuizType = 'games';
-  let quizScore = { score: 0, total: 0 };
+  let quizScore = { score: 0, total: 0, type: 'games' };
 
   onMount(() => {
     window.addEventListener('startQuiz', handleStartQuiz);
@@ -48,9 +48,17 @@
 </main>
 
 <style>
+  :global(body) {
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+  }
+
   main {
     min-height: 100vh;
     background-color: #1a1a1a;
     font-family: 'Press Start 2P', monospace;
+    position: relative;
+    z-index: 0;
   }
 </style>

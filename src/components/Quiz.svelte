@@ -45,7 +45,7 @@
   }
 
   function checkAnswer(selectedIndex) {
-    if (selectedIndex === questions[currentQuestion].correct) {
+    if (selectedIndex === questions[currentQuestion].correctAnswer) {
       score++;
     }
 
@@ -120,6 +120,8 @@
     margin: 2rem auto;
     color: #00ff00;
     font-family: 'Press Start 2P', monospace;
+    position: relative;
+    z-index: 1;
   }
 
   .header {
