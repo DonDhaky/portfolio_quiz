@@ -35,34 +35,36 @@
   </div>
 </nav>
 
-<div class="start-screen" in:fade={{ duration: 500 }}>
-  <h1 class="section-title">Les Quizz</h1>
-  <div class="quizzes-grid">
-    <div class="quiz-container">
-      <h1>Un brin d'histoire sur les jeux vidéo</h1>
-      <p class="instructions">Fan de gaming ? Prouvez-le !</p>
-      <button class="start-button" on:click={() => startQuiz('games')}>
-        Démarrer le Quiz
-      </button>
-    </div>
+<main class="start-screen" in:fade={{ duration: 500 }}>
+  <div class="content-wrapper">
+    <h1 class="section-title">Les Quizz</h1>
+    <div class="quizzes-grid">
+      <div class="quiz-container">
+        <h2>Un brin d'histoire sur les jeux vidéo</h2>
+        <p class="instructions">Fan de gaming ? Prouvez-le !</p>
+        <button class="start-button" on:click={() => startQuiz('games')}>
+          Démarrer le Quiz
+        </button>
+      </div>
 
-    <div class="quiz-container">
-      <h1>L'évolution des nouvelles technologies</h1>
-      <p class="instructions">"Oh non, l'IA c'est nul, un dev qui utilise l'IA n'est pas un bon dev..."</p>
-      <button class="start-button" on:click={() => startQuiz('tech')}>
-        Démarrer le Quiz
-      </button>
-    </div>
+      <div class="quiz-container">
+        <h2>L'évolution des nouvelles technologies</h2>
+        <p class="instructions">"Oh non, l'IA c'est nul, un dev qui utilise l'IA n'est pas un bon dev..."</p>
+        <button class="start-button" on:click={() => startQuiz('tech')}>
+          Démarrer le Quiz
+        </button>
+      </div>
 
-    <div class="quiz-container">
-      <h1>L'histoire du basketball</h1>
-      <p class="instructions">Grand fan de basketball, montrez moi que vous n'êtes pas un "basketix" !</p>
-      <button class="start-button" on:click={() => startQuiz('basketball')}>
-        Démarrer le Quiz
-      </button>
+      <div class="quiz-container">
+        <h2>L'histoire du basketball</h2>
+        <p class="instructions">Grand fan de basketball, montrez moi que vous n'êtes pas un "basketix" !</p>
+        <button class="start-button" on:click={() => startQuiz('basketball')}>
+          Démarrer le Quiz
+        </button>
+      </div>
     </div>
   </div>
-</div>
+</main>
 
 <style>
   .nav-bar {
@@ -106,14 +108,44 @@
     gap: 1rem;
   }
 
+  .start-screen {
+    min-height: 100vh;
+    background-color: #1a1a1a;
+    color: #00ff00;
+    font-family: 'Press Start 2P', monospace;
+    padding-top: 8rem;
+  }
+
+  .content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #00ff00;
+    text-shadow: 2px 2px #000;
+    margin: 0;
+    padding: 0;
+  }
+
+  .section-title::after {
+    content: '';
+    display: block;
+    width: 200px;
+    height: 3px;
+    background-color: #00ff00;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    margin: 0.5rem auto 1rem;
+  }
+
   .quizzes-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     width: 100%;
-    max-width: 1200px;
-    padding: 0;
-    margin-top: 1rem;
   }
 
   .quiz-container {
@@ -132,19 +164,7 @@
     transform: translateY(-5px);
   }
 
-  .start-screen {
-    display: grid;
-    place-items: center;
-    min-height: 100vh;
-    background-color: #1a1a1a;
-    color: #00ff00;
-    font-family: 'Press Start 2P', monospace;
-    text-align: center;
-    padding: 1rem;
-    padding-top: 8rem;
-  }
-
-  h1 {
+  .quiz-container h2 {
     font-size: 1.5rem;
     margin: 0;
     text-shadow: 2px 2px #000;
@@ -173,24 +193,6 @@
   .start-button:hover {
     transform: scale(1.1);
     box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
-  }
-
-  .section-title {
-    font-size: 2.5rem;
-    margin: 0;
-    text-align: center;
-    color: #00ff00;
-    text-shadow: 2px 2px #000;
-  }
-
-  .section-title::after {
-    content: '';
-    display: block;
-    width: 200px;
-    height: 3px;
-    background-color: #00ff00;
-    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
-    margin: 0.5rem auto 0;
   }
 
   @media (max-width: 768px) {
