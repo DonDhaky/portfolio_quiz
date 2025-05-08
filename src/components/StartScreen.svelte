@@ -23,7 +23,7 @@
     <p>Développeur Web & Mobile</p>
   </div>
   <div class="personal-speech">
-    <p>Disponible pour vos projets d'applications mobiles avec FlutterFlow</p>
+    <p>Disponible pour vos projets d'apps mobiles FlutterFlow</p>
   </div>
   <div class="nav-buttons">
     <button class="start-button" on:click={handleDownloadCV}>
@@ -36,10 +36,11 @@
 </nav>
 
 <div class="start-screen" in:fade={{ duration: 500 }}>
+  <h1 class="section-title">Les Quizz</h1>
   <div class="quizzes-grid">
     <div class="quiz-container">
       <h1>Un brin d'histoire sur les jeux vidéo</h1>
-      <p class="instructions">Fan de gaming ? Testez vos connaissances !</p>
+      <p class="instructions">Fan de gaming ? Prouvez-le !</p>
       <button class="start-button" on:click={() => startQuiz('games')}>
         Démarrer le Quiz
       </button>
@@ -47,7 +48,7 @@
 
     <div class="quiz-container">
       <h1>L'évolution des nouvelles technologies</h1>
-      <p class="instructions">"Oh non, l'IA c'est nul, un dev qui utilise l'IA n'est pas un dev de qualité..."</p>
+      <p class="instructions">"Oh non, l'IA c'est nul, un dev qui utilise l'IA n'est pas un bon dev..."</p>
       <button class="start-button" on:click={() => startQuiz('tech')}>
         Démarrer le Quiz
       </button>
@@ -172,6 +173,28 @@
     box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
   }
 
+  .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #00ff00;
+    text-shadow: 2px 2px #000;
+    position: relative;
+    padding-bottom: 1rem;
+  }
+
+  .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 3px;
+    background-color: #00ff00;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+  }
+
   @media (max-width: 768px) {
     .quizzes-grid {
       grid-template-columns: 1fr;
@@ -190,6 +213,14 @@
     .nav-buttons {
       width: 100%;
       justify-content: center;
+    }
+
+    .section-title {
+      font-size: 2rem;
+    }
+
+    .section-title::after {
+      width: 150px;
     }
   }
 </style> 
