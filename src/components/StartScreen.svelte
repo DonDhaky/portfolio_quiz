@@ -112,7 +112,8 @@
     gap: 2rem;
     width: 100%;
     max-width: 1200px;
-    padding: 1rem;
+    padding: 0;
+    margin-top: 0;
   }
 
   .quiz-container {
@@ -139,7 +140,7 @@
     color: #00ff00;
     font-family: 'Press Start 2P', monospace;
     text-align: center;
-    padding: 2rem;
+    padding: 1rem;
     padding-top: 8rem;
   }
 
@@ -176,7 +177,7 @@
 
   .section-title {
     font-size: 2.5rem;
-    margin-bottom: 1rem;
+    margin: 0 0 0.5rem 0;
     text-align: center;
     color: #00ff00;
     text-shadow: 2px 2px #000;
