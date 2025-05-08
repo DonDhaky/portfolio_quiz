@@ -76,6 +76,7 @@
     padding: 1rem 2rem;
     background-color: #2a2a2a;
     border-bottom: 2px solid #00ff00;
+    z-index: 1000;
   }
 
   .personal-info {
@@ -111,7 +112,7 @@
     gap: 2rem;
     width: 100%;
     max-width: 1200px;
-    padding: 2rem;
+    padding: 1rem;
   }
 
   .quiz-container {
@@ -139,7 +140,7 @@
     font-family: 'Press Start 2P', monospace;
     text-align: center;
     padding: 2rem;
-    padding-top: 6rem;
+    padding-top: 8rem;
   }
 
   h1 {
@@ -175,10 +176,12 @@
 
   .section-title {
     font-size: 2.5rem;
+    margin-bottom: 1rem;
     text-align: center;
     color: #00ff00;
     text-shadow: 2px 2px #000;
     position: relative;
+    padding-bottom: 0.5rem;
   }
 
   .section-title::after {
