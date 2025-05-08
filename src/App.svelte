@@ -2,7 +2,6 @@
   import StartScreen from './components/StartScreen.svelte';
   import Quiz from './components/Quiz.svelte';
   import FinalScreen from './components/FinalScreen.svelte';
-  import { onMount } from 'svelte';
 
   let currentScreen = 'start';
   let currentQuizType = 'games';
@@ -14,11 +13,7 @@
   }
 
   function handleQuizComplete(event) {
-    quizScore = {
-      score: event.detail.score,
-      total: event.detail.total,
-      type: event.detail.type
-    };
+    quizScore = event.detail;
     currentScreen = 'final';
   }
 
@@ -26,7 +21,7 @@
     currentScreen = 'start';
   }
 
-  function restartQuiz() {
+  function handleRestart() {
     currentScreen = 'start';
   }
 </script>
@@ -41,7 +36,10 @@
       on:quizAbandoned={handleQuizAbandoned}
     />
   {:else if currentScreen === 'final'}
-    <FinalScreen {quizScore} on:restart={restartQuiz} />
+    <FinalScreen 
+      quizScore={quizScore} 
+      on:restart={handleRestart}
+    />
   {/if}
 </main>
 
@@ -50,13 +48,19 @@
     margin: 0;
     padding: 0;
     background-color: #1a1a1a;
+    color: #00ff00;
+    font-family: 'Press Start 2P', monospace;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   main {
-    min-height: 100vh;
-    background-color: #1a1a1a;
-    font-family: 'Press Start 2P', monospace;
-    position: relative;
-    z-index: 0;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    box-sizing: border-box;
   }
 </style>

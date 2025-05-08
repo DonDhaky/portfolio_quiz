@@ -16,11 +16,23 @@
   let timer;
   let showGameOver = false;
   let showAbandonButton = false;
+  let isLoading = true;
+  let error = null;
 
   onMount(() => {
-    loadQuestions();
-    startTimer();
-    showAbandonButton = true;
+    try {
+      loadQuestions();
+      if (questions.length === 0) {
+        error = "Impossible de charger les questions. Veuillez réessayer.";
+        return;
+      }
+      startTimer();
+      showAbandonButton = true;
+      isLoading = false;
+    } catch (e) {
+      error = "Une erreur est survenue lors du chargement du quiz.";
+      console.error(e);
+    }
   });
 
   function loadQuestions() {
@@ -34,6 +46,8 @@
       case 'tech':
         questions = questionsTechData.questions;
         break;
+      default:
+        throw new Error(`Type de quiz inconnu: ${quizType}`);
     }
   }
 
@@ -76,7 +90,18 @@
 </script>
 
 <div class="quiz-container" in:fade={{ duration: 500 }}>
-  {#if showGameOver}
+  {#if isLoading}
+    <div class="loading">
+      <p>Chargement du quiz...</p>
+    </div>
+  {:else if error}
+    <div class="error">
+      <p>{error}</p>
+      <button class="retry-button" on:click={() => window.location.reload()}>
+        Réessayer
+      </button>
+    </div>
+  {:else if showGameOver}
     <div class="game-over" in:fly={{ y: -50, duration: 500 }}>
       <h2>Game Over !</h2>
       <p>Score : {score}/{questions.length}</p>
@@ -224,5 +249,18 @@
     .timer {
       font-size: 1rem;
     }
+  }
+
+  .loading, .error {
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .error {
+    color: #ff0000;
+  }
+
+  .error .retry-button {
+    margin-top: 1rem;
   }
 </style> 
