@@ -44,7 +44,7 @@
 
     <div class="quiz-container">
       <h1>L'évolution des nouvelles technologies</h1>
-      <p class="instructions">"Oh non, l'IA c'est nul, ça rend les devs moyens, ils ne connaissent plus leur métier !..."</p>
+      <p class="instructions">"Oh non, l'IA c'est nul, ça rend les devs moyens, ils ne connaissent plus leur métier, c'est de la triche, les tests techniques ya rien de plus pertinent !".......</p>
       <button class="start-button" on:click={() => startQuiz('tech')}>
         Démarrer le Quiz
       </button>
