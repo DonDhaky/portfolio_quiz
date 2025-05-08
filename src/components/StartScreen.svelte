@@ -175,12 +175,10 @@
 
   .section-title {
     font-size: 2.5rem;
-    margin-bottom: 2rem;
     text-align: center;
     color: #00ff00;
     text-shadow: 2px 2px #000;
     position: relative;
-    padding-bottom: 1rem;
   }
 
   .section-title::after {
