@@ -211,6 +211,10 @@
       text-align: center;
     }
 
+    .personal-speech {
+      text-align: center;
+    }
+
     .nav-buttons {
       width: 100%;
       justify-content: center;
