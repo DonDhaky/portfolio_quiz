@@ -113,7 +113,7 @@
     width: 100%;
     max-width: 1200px;
     padding: 0;
-    margin-top: 0;
+    margin-top: 1rem;
   }
 
   .quiz-container {
@@ -177,24 +177,20 @@
 
   .section-title {
     font-size: 2.5rem;
-    margin: 0 0 0.5rem 0;
+    margin: 0;
     text-align: center;
     color: #00ff00;
     text-shadow: 2px 2px #000;
-    position: relative;
-    padding-bottom: 0.5rem;
   }
 
   .section-title::after {
     content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    display: block;
     width: 200px;
     height: 3px;
     background-color: #00ff00;
     box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    margin: 0.5rem auto 0;
   }
 
   @media (max-width: 768px) {
