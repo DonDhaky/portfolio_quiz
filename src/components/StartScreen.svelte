@@ -139,6 +139,7 @@
     background-color: #00ff00;
     box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
     margin: 0.5rem auto 1rem;
+    margin-bottom: 2rem;
   }
 
   .quizzes-grid {
@@ -198,6 +199,7 @@
   @media (max-width: 768px) {
     .quizzes-grid {
       grid-template-columns: 1fr;
+      margin-top: 5rem;
     }
 
     .nav-bar {
