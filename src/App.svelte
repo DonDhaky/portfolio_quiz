@@ -8,12 +8,6 @@
   let currentQuizType = 'games';
   let quizScore = { score: 0, total: 0, type: 'games' };
 
-  onMount(() => {
-    window.addEventListener('startQuiz', handleStartQuiz);
-    window.addEventListener('quizComplete', handleQuizComplete);
-    window.addEventListener('quizAbandoned', handleQuizAbandoned);
-  });
-
   function handleStartQuiz(event) {
     currentQuizType = event.detail.type;
     currentScreen = 'quiz';
@@ -39,11 +33,15 @@
 
 <main>
   {#if currentScreen === 'start'}
-    <StartScreen />
+    <StartScreen on:startQuiz={handleStartQuiz} />
   {:else if currentScreen === 'quiz'}
-    <Quiz quizType={currentQuizType} />
+    <Quiz 
+      quizType={currentQuizType} 
+      on:quizComplete={handleQuizComplete}
+      on:quizAbandoned={handleQuizAbandoned}
+    />
   {:else if currentScreen === 'final'}
-    <FinalScreen {quizScore} onRestart={restartQuiz} />
+    <FinalScreen {quizScore} on:restart={restartQuiz} />
   {/if}
 </main>
 

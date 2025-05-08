@@ -1,9 +1,12 @@
 <script>
   import { onMount } from 'svelte';
   import { fade, fly } from 'svelte/transition';
+  import { createEventDispatcher } from 'svelte';
   import questionsData from '../data/questions.json';
   import questionsBasketData from '../data/questions_basket.json';
   import questionsTechData from '../data/questions_tech.json';
+
+  const dispatch = createEventDispatcher();
 
   export let quizType = 'games';
   let questions = [];
@@ -62,17 +65,13 @@
     if (percentage < 50) {
       showGameOver = true;
     } else {
-      const event = new CustomEvent('quizComplete', {
-        detail: { score, total: questions.length, type: quizType }
-      });
-      window.dispatchEvent(event);
+      dispatch('quizComplete', { score, total: questions.length, type: quizType });
     }
   }
 
   function abandonQuiz() {
     clearInterval(timer);
-    const event = new CustomEvent('quizAbandoned');
-    window.dispatchEvent(event);
+    dispatch('quizAbandoned');
   }
 </script>
 

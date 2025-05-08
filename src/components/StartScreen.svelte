@@ -1,5 +1,8 @@
 <script>
   import { fade } from 'svelte/transition';
+  import { createEventDispatcher } from 'svelte';
+
+  const dispatch = createEventDispatcher();
 
   function handleEmailClick() {
     window.location.href = 'mailto:erickthonon@gmail.com';
@@ -10,9 +13,7 @@
   }
 
   function startQuiz(quizType) {
-    // Émettre un événement pour démarrer le quiz sélectionné
-    const event = new CustomEvent('startQuiz', { detail: { type: quizType } });
-    window.dispatchEvent(event);
+    dispatch('startQuiz', { type: quizType });
   }
 </script>
 
@@ -79,13 +80,13 @@
   }
 
   .personal-info h2 {
-    font-size: 1rem;
+    font-size: 1.5rem;
     margin: 0;
     margin-bottom: 0.5rem;
   }
 
   .personal-info p {
-    font-size: 0.7rem;
+    font-size: 1rem;
     margin: 0;
     opacity: 0.8;
   }
