@@ -22,6 +22,9 @@
     <h2>Erick THONON</h2>
     <p>Développeur Web & Mobile</p>
   </div>
+  <div class="personal-speech">
+    <p>Disponible pour vos projets d'applications mobiles avec FlutterFlow</p>
+  </div>
   <div class="nav-buttons">
     <button class="start-button" on:click={handleDownloadCV}>
       Télécharger mon CV
@@ -80,7 +83,7 @@
   }
 
   .personal-info h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin: 0;
     margin-bottom: 0.5rem;
   }
@@ -89,6 +92,11 @@
     font-size: 1rem;
     margin: 0;
     opacity: 0.8;
+  }
+
+  .personal-speech p {
+    font-size: 1.5rem;
+    margin: 0;
   }
 
   .nav-buttons {
