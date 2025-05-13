@@ -1,38 +1,23 @@
-# Quiz sur l'Histoire des Jeux Vidéo
+# Portfolio - Quizz, game et plus encore
 
-Un quiz interactif sur l'histoire des jeux vidéo, développé avec Svelte, un framework Javascript ultra moderne et efficace.
+Un portfolio déployé sur GitHub Page avec des quiz interactifs sur l'histoire des jeux vidéo, des nouvelles technologies et de basketball.
+
 
 ## Fonctionnalités
 
-- 10 questions aléatoires sur l'histoire des jeux vidéo
-- Personnage animé qui réagit aux réponses
-- Effets sonores rétro
-- Stockage des meilleurs scores
-- Design rétro inspiré du Game Boy Advance
+- Des questions aléatoires dans chaque quiz
+- Design rétro type rétro gaming
 - Accessibilité optimisée
-- Formulaire de contact en fin de quiz
+- Un jeu de combat en 2D type Street Fighter II
+- Formulaire de contact 
 
-## Installation
-
-```bash
-# Installer les dépendances
-npm install
-
-# Lancer le serveur de développement
-npm run dev
-
-# Construire pour la production
-npm run build
-
-# Déployer sur GitHub Pages
-npm run deploy
-```
 
 ## Technologies utilisées
 
 - Svelte
 - Vite
 - GitHub Pages
+- Phaser.js
 
 ## Déploiement
 

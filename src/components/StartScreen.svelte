@@ -23,7 +23,7 @@
     <p>Développeur Web & Mobile</p>
   </div>
   <div class="personal-speech">
-    <p>Disponible pour vos projets d'apps mobiles FlutterFlow</p>
+    <p>Disponible pour vos projets de développement web, mobile et gaming</p>
   </div>
   <div class="nav-buttons">
     <button class="start-button" on:click={handleDownloadCV}>
