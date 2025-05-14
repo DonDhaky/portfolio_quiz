@@ -59,7 +59,7 @@
   <div class="content-wrapper">
     <h1 class="section-title">Les Quizz</h1>
     <div class="carousel-wrapper">
-      <CustomCarousel {items}= {quizzes}>
+      <CustomCarousel {items}={quizzes}>
         <svelte:fragment slot="slide" let:item>
           <div class="quiz-slide">
             <h2>{item.titre}</h2>
