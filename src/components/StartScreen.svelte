@@ -1,9 +1,8 @@
 <script lang="ts">
   import { fade } from 'svelte/transition';
-  import { createEventDispatcher } from 'svelte';
   import CustomCarousel from './CustomCarousel.svelte';
 
-  const dispatch = createEventDispatcher();
+  let { onStartQuiz = undefined } = $props();
 
   function handleEmailClick() {
     window.location.href = 'mailto:erickthonon@gmail.com';
@@ -14,7 +13,7 @@
   }
 
   function startQuiz(quizType) {
-    dispatch('startQuiz', { type: quizType });
+    onStartQuiz?.({ type: quizType });
   }
 
   // Liste des quiz pour le carrousel
@@ -43,13 +42,13 @@
     <p>Développeur Web & Mobile</p>
   </div>
   <div class="personal-speech">
-    <p>Disponible pour vos projets de développement web, mobile et gaming</p>
+    <p>Disponible pour vos projets de développement mobile</p>
   </div>
   <div class="nav-buttons">
-    <button class="start-button" on:click={handleDownloadCV}>
+    <button class="start-button" onclick={handleDownloadCV}>
       Télécharger mon CV
     </button>
-    <button class="start-button" on:click={handleEmailClick}>
+    <button class="start-button" onclick={handleEmailClick}>
       Me Contacter
     </button>
   </div>
@@ -64,7 +63,7 @@
           <div class="quiz-slide">
             <h2>{item.titre}</h2>
             <p class="instructions">{item.instructions}</p>
-            <button class="start-button" on:click={() => startQuiz(item.type)}>
+            <button class="start-button" onclick={() => startQuiz(item.type)}>
               Démarrer le Quiz
             </button>
           </div>

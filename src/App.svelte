@@ -9,7 +9,7 @@
   let quizScore = { score: 0, total: 0, type: 'games' };
 
   function handleStartQuiz(event) {
-    currentQuizType = event.detail.type;
+    currentQuizType = event.type;
     currentScreen = 'quiz';
   }
 
@@ -30,7 +30,7 @@
 <main>
   <BlogSection />
   {#if currentScreen === 'start'}
-    <StartScreen on:startQuiz={handleStartQuiz} />
+    <StartScreen onStartQuiz={handleStartQuiz} />
   {:else if currentScreen === 'quiz'}
     <Quiz 
       quizType={currentQuizType} 
