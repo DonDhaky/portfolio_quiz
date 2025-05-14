@@ -2,7 +2,7 @@
   import { fade } from 'svelte/transition';
   import CustomCarousel from './CustomCarousel.svelte';
 
-  let { onStartQuiz = undefined } = $props();
+  export let onStartQuiz: ((type: string) => void) | undefined;
 
   function handleEmailClick() {
     window.location.href = 'mailto:erickthonon@gmail.com';
@@ -13,7 +13,7 @@
   }
 
   function startQuiz(quizType) {
-    onStartQuiz?.({ type: quizType });
+    onStartQuiz?.(quizType);
   }
 
   // Liste des quiz pour le carrousel
@@ -116,7 +116,6 @@
   }
 
   .start-screen {
-    min-height: 100vh;
     background-color: #1a1a1a;
     color: #00ff00;
     font-family: 'Press Start 2P', monospace;
@@ -167,8 +166,8 @@
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    min-width: 320px;
-    max-width: 400px;
+    min-width: 550px;
+    max-width: 700px;
     margin: 0 auto;
   }
 

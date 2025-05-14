@@ -8,8 +8,8 @@
   let currentQuizType = 'games';
   let quizScore = { score: 0, total: 0, type: 'games' };
 
-  function handleStartQuiz(event) {
-    currentQuizType = event.type;
+  function handleStartQuiz(type) {
+    currentQuizType = type;
     currentScreen = 'quiz';
   }
 
@@ -28,8 +28,8 @@
 </script>
 
 <main>
-  <BlogSection />
   {#if currentScreen === 'start'}
+    <BlogSection />
     <StartScreen onStartQuiz={handleStartQuiz} />
   {:else if currentScreen === 'quiz'}
     <Quiz 
@@ -62,7 +62,7 @@
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem;
     box-sizing: border-box;
   }
+
 </style>
