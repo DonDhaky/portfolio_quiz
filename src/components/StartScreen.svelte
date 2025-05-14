@@ -1,6 +1,7 @@
-<script>
+<script lang="ts">
   import { fade } from 'svelte/transition';
   import { createEventDispatcher } from 'svelte';
+  import CustomCarousel from './CustomCarousel.svelte';
 
   const dispatch = createEventDispatcher();
 
@@ -15,6 +16,25 @@
   function startQuiz(quizType) {
     dispatch('startQuiz', { type: quizType });
   }
+
+  // Liste des quiz pour le carrousel
+  const quizzes = [
+    {
+      titre: "Un brin d'histoire sur les jeux vidéo",
+      instructions: "Fan de gaming ? Prouvez-le !",
+      type: 'games',
+    },
+    {
+      titre: "L'évolution des nouvelles technologies",
+      instructions: '"Oh non, l\'IA c\'est nul, un dev qui utilise l\'IA n\'est pas un bon dev..."',
+      type: 'tech',
+    },
+    {
+      titre: "L'histoire du basketball",
+      instructions: 'Grand fan de basketball, montrez moi que vous n\'êtes pas un "basketix" !',
+      type: 'basketball',
+    },
+  ];
 </script>
 
 <nav class="nav-bar">
@@ -38,30 +58,18 @@
 <main class="start-screen" in:fade={{ duration: 500 }}>
   <div class="content-wrapper">
     <h1 class="section-title">Les Quizz</h1>
-    <div class="quizzes-grid">
-      <div class="quiz-container">
-        <h2>Un brin d'histoire sur les jeux vidéo</h2>
-        <p class="instructions">Fan de gaming ? Prouvez-le !</p>
-        <button class="start-button" on:click={() => startQuiz('games')}>
-          Démarrer le Quiz
-        </button>
-      </div>
-
-      <div class="quiz-container">
-        <h2>L'évolution des nouvelles technologies</h2>
-        <p class="instructions">"Oh non, l'IA c'est nul, un dev qui utilise l'IA n'est pas un bon dev..."</p>
-        <button class="start-button" on:click={() => startQuiz('tech')}>
-          Démarrer le Quiz
-        </button>
-      </div>
-
-      <div class="quiz-container">
-        <h2>L'histoire du basketball</h2>
-        <p class="instructions">Grand fan de basketball, montrez moi que vous n'êtes pas un "basketix" !</p>
-        <button class="start-button" on:click={() => startQuiz('basketball')}>
-          Démarrer le Quiz
-        </button>
-      </div>
+    <div class="carousel-wrapper">
+      <CustomCarousel {items}= {quizzes}>
+        <svelte:fragment slot="slide" let:item>
+          <div class="quiz-slide">
+            <h2>{item.titre}</h2>
+            <p class="instructions">{item.instructions}</p>
+            <button class="start-button" on:click={() => startQuiz(item.type)}>
+              Démarrer le Quiz
+            </button>
+          </div>
+        </svelte:fragment>
+      </CustomCarousel>
     </div>
   </div>
 </main>
@@ -142,40 +150,42 @@
     margin-bottom: 2rem;
   }
 
-  .quizzes-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+  .carousel-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
+    margin-top: 2rem;
   }
 
-  .quiz-container {
+  .quiz-slide {
     background-color: #2a2a2a;
     border: 3px solid #00ff00;
     border-radius: 10px;
     padding: 2rem;
     box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
-    display: grid;
-    grid-template-rows: auto auto auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 2rem;
-    transition: transform 0.3s ease;
+    min-width: 320px;
+    max-width: 400px;
+    margin: 0 auto;
   }
 
-  .quiz-container:hover {
-    transform: translateY(-5px);
-  }
-
-  .quiz-container h2 {
+  .quiz-slide h2 {
     font-size: 1.5rem;
     margin: 0;
     text-shadow: 2px 2px #000;
     line-height: 1.4;
+    text-align: center;
   }
 
   .instructions {
     font-size: 0.8rem;
     margin: 0;
     line-height: 1.5;
+    text-align: center;
   }
 
   .start-button {
@@ -197,34 +207,32 @@
   }
 
   @media (max-width: 768px) {
-    .quizzes-grid {
-      grid-template-columns: 1fr;
+    .carousel-wrapper {
       margin-top: 5rem;
     }
-
+    .quiz-slide {
+      min-width: 220px;
+      max-width: 90vw;
+      padding: 1rem;
+    }
     .nav-bar {
       flex-direction: column;
       gap: 1rem;
       padding: 1rem;
     }
-
     .personal-info {
       text-align: center;
     }
-
     .personal-speech {
       text-align: center;
     }
-
     .nav-buttons {
       width: 100%;
       justify-content: center;
     }
-
     .section-title {
       font-size: 2rem;
     }
-
     .section-title::after {
       width: 150px;
     }

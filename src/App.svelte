@@ -2,6 +2,7 @@
   import StartScreen from './components/StartScreen.svelte';
   import Quiz from './components/Quiz.svelte';
   import FinalScreen from './components/FinalScreen.svelte';
+  import BlogSection from './components/BlogSection.svelte';
 
   let currentScreen = 'start';
   let currentQuizType = 'games';
@@ -27,6 +28,7 @@
 </script>
 
 <main>
+  <BlogSection />
   {#if currentScreen === 'start'}
     <StartScreen on:startQuiz={handleStartQuiz} />
   {:else if currentScreen === 'quiz'}
