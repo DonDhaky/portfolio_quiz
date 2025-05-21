@@ -39,10 +39,10 @@
 <nav class="nav-bar">
   <div class="personal-info">
     <h2>Erick THONON</h2>
-    <p>Développeur Web & Mobile</p>
+    <p>Développeur low-code & no-code</p>
   </div>
   <div class="personal-speech">
-    <p>Disponible pour vos projets de développement mobile</p>
+    <p>Disponible pour vos projets de développement web et mobile</p>
   </div>
   <div class="nav-buttons">
     <button class="start-button" onclick={handleDownloadCV}>

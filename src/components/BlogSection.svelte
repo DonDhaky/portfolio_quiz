@@ -2,7 +2,8 @@
   export let titre = "Bienvenue sur mon Portfolio !";
   export let contenu = `Je suis passionné par la programmation, les jeux vidéo, le basketball et globalement toutes les nouvelles technologies. 
 Ce site servira de vitrine, où j'exposerai ma vision sur la programmation et son avenir (de mon humble point de vue), avec l'apparition d'outils très puissants tels que Cursor, Manus, Canva AI. En effet, l'usage des l'IA générative dans le cadre de la programmation ne risque que d'augmenter et s'améliorer, pour le bonheur des entreprises et développeurs souhaitant gagner en productivité et rapidité, et le malheur des sceptiques.
-Vous pourrez trouver également quelques quiz, jeux et projets que j'aurai fait moi-même !
+Me concernant, j'ai décidé d'opter pour le low-code & no-code pour la majorité de mes projets, misant sur la progression de ces outils et leur potentiel grandissant. Ainsi, je développe des applications mobiles avec FlutterFlow et des apps web avec AppSmith. Côté jeux vidéo, j'apprends à utiliser Gdevelop.
+Les projets issus de mes créations seront visibles ici et disponibles sur mon GitHub.
 Bonne visite et à bientôt !`;
 </script>
 
